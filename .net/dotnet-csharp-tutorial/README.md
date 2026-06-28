@@ -14,7 +14,7 @@ Quick start (after you install .NET SDK):
 Run a lesson example (replace `FundamentalsApp` with another project name):
 
 ```powershell
-cd C:\job\learn\.net\dotnet-csharp-tutorial
+cd .net/dotnet-csharp-tutorial
 dotnet run --project src\FundamentalsApp
 ```
 

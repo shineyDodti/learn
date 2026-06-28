@@ -8,8 +8,9 @@ This workspace holds several language folders for learning projects. Use the lin
 
 Quick start for .NET lessons:
 
+dotnet run --project src\FundamentalsApp
 ```powershell
-cd C:\job\learn\.net\dotnet-csharp-tutorial
+cd .net/dotnet-csharp-tutorial
 dotnet run --project src\FundamentalsApp
 ```
 
