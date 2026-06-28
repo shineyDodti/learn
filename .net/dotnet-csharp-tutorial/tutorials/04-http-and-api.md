@@ -1,13 +1,39 @@
-# HTTP verbs and APIs (overview)
+# HTTP verbs and APIs
 
-Common HTTP verbs:
-- GET — retrieve a resource
-- POST — create a resource
-- PUT — replace a resource
-- PATCH — modify part of a resource
-- DELETE — remove a resource
+This lesson explains how C# talks to web services.
 
-Full runnable example (`src/HttpDemoApp/Program.cs`):
+## What HTTP is
+
+HTTP is the language a browser or app uses to talk to a server.
+
+When your app calls an API, it sends a request.
+The API sends back a response.
+
+## Common HTTP verbs
+
+- **GET**: read data
+- **POST**: create new data
+- **PUT**: replace data
+- **PATCH**: change part of data
+- **DELETE**: remove data
+
+## What an API is
+
+An API is a way for programs to talk to each other.
+
+Example:
+
+- your app asks for products
+- the API sends back JSON
+- your app shows the products
+
+## The C# code in this lesson
+
+This app uses `HttpClient` to send one GET request.
+
+That is the basic pattern you will use again and again.
+
+## Full runnable code
 
 ```csharp
 using System;
@@ -36,12 +62,26 @@ class Program
 }
 ```
 
-Run locally:
+## Run it
+
 ```powershell
 dotnet run --project src\HttpDemoApp
 ```
 
-Minimal API (server-side) example (copy into a new project):
+## What to notice
+
+- the code creates an `HttpClient`
+- it sends a GET request
+- it reads the response text
+- it prints the status code
+
+## Why this matters
+
+This is how apps talk to websites and backend services.
+
+## Small API example
+
+Here is a tiny API server:
 
 ```csharp
 var builder = WebApplication.CreateBuilder();
@@ -50,6 +90,11 @@ app.MapGet("/hello", () => "Hello world");
 app.Run();
 ```
 
-Notes:
-- APIs often use JSON. Use `System.Text.Json` or `Newtonsoft.Json` for (de)serialization.
-- Practice by building small endpoints and calling them with `curl` or `HttpClient`.
+That means: when someone visits `/hello`, return `Hello world`.
+
+## Try this yourself
+
+- change the URL
+- change the printed text
+- look up what GET and POST mean
+- try writing a tiny API that returns a string

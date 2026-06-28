@@ -1,12 +1,43 @@
 # ACID and basic persistence concepts
 
-ACID properties for transactions:
-- Atomicity: all or nothing.
-- Consistency: database moves from one valid state to another.
-- Isolation: concurrent transactions don't interfere.
-- Durability: once committed, data persists.
+This lesson is about saving data safely.
 
-Full runnable example (`src/AcidApp/Program.cs`):
+When a program changes data, you want to know:
+
+- did everything finish?
+- did nothing get half-saved?
+- can I trust the result?
+
+That is what ACID is about.
+
+## ACID in simple words
+
+- **Atomicity**: all of it happens or none of it happens.
+- **Consistency**: the data stays valid.
+- **Isolation**: one transaction does not break another.
+- **Durability**: once saved, the data stays saved.
+
+## A simple picture
+
+Think of sending money:
+
+1. remove money from one account
+2. add money to another account
+
+If step 1 happens but step 2 fails, that is bad.
+
+A transaction protects you from that kind of problem.
+
+## What a transaction is
+
+A transaction is a grouped set of changes.
+
+You either:
+
+- commit it, which saves the changes
+- rollback it, which cancels the changes
+
+## Full runnable code
 
 ```csharp
 using System;
@@ -62,9 +93,22 @@ class Program
 }
 ```
 
-Run locally:
+## Run it
+
 ```powershell
 dotnet run --project src\AcidApp
 ```
 
-For real databases, learn SQL and a provider (SQL Server, PostgreSQL, SQLite). Use `TransactionScope` or provider transactions in ADO.NET / EF Core.
+## What to notice
+
+- the first transaction saves data
+- the second one gets cancelled
+- the database only keeps the committed data
+
+## Why this matters
+
+Real databases use transactions so data does not get broken when errors happen.
+
+That is how apps keep money, orders, and important records safe.
+
+For real databases, learn SQL and a provider like SQL Server, PostgreSQL, or SQLite.

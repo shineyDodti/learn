@@ -1,6 +1,12 @@
 NoobTutor — .NET C# learning console app
 
-This workspace contains beginner-friendly C# console apps (one per lesson) and markdown tutorials with runnable code examples.
+This workspace contains beginner-friendly C# lessons with one clear starting guide, lesson pages, and a small console app for each topic.
+
+Start here if you are new:
+
+- [00-beginner-guide.md](tutorials/00-beginner-guide.md)
+
+Read that page first. It explains the terms, the order, and how to use the repo.
 
 Lessons:
 
