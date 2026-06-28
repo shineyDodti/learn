@@ -2,12 +2,21 @@ NoobTutor — .NET C# learning console app
 
 This workspace contains beginner-friendly C# console apps (one per lesson) and markdown tutorials with runnable code examples.
 
-- `src/FundamentalsApp` — fundamentals examples
-- `src/OopApp` — OOP & SOLID example
-- `src/AcidApp` — ACID transaction simulation
-- `src/HttpDemoApp` — HTTP client demo
-- `src/ExercisesApp` — exercises and placeholders
-- `tutorials/` — markdown lessons with full example code and GitHub-friendly snippets
+Lessons:
+
+- [01-fundamentals.md](tutorials/01-fundamentals.md) → [FundamentalsApp](src/FundamentalsApp/FundamentalsApp.csproj)
+- [02-oop-and-solid.md](tutorials/02-oop-and-solid.md) → [OopApp](src/OopApp/OopApp.csproj)
+- [03-acid-and-db.md](tutorials/03-acid-and-db.md) → [AcidApp](src/AcidApp/AcidApp.csproj)
+- [04-http-and-api.md](tutorials/04-http-and-api.md) → [HttpDemoApp](src/HttpDemoApp/HttpDemoApp.csproj)
+- [05-exercises.md](tutorials/05-exercises.md) → [ExercisesApp](src/ExercisesApp/ExercisesApp.csproj)
+
+Projects:
+
+- [FundamentalsApp](src/FundamentalsApp/FundamentalsApp.csproj)
+- [OopApp](src/OopApp/OopApp.csproj)
+- [AcidApp](src/AcidApp/AcidApp.csproj)
+- [HttpDemoApp](src/HttpDemoApp/HttpDemoApp.csproj)
+- [ExercisesApp](src/ExercisesApp/ExercisesApp.csproj)
 
 Quick start (after you install .NET SDK):
 
