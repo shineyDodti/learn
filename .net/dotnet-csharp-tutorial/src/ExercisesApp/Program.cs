@@ -1,10 +1,12 @@
-using System;
+using DotnetTutorial.Exercises.Core;
 
-class Program
+namespace DotnetTutorial.ExercisesApp;
+
+internal static class Program
 {
-    static void Main()
+    private static void Main()
     {
-        Console.WriteLine("Exercises placeholder\n");
-        Console.WriteLine("1) Add factorial demo.\n2) Serialize Student list to JSON.\n3) Create minimal API returning students.");
+        var runner = new ExercisesRunner();
+        runner.ShowMenu();
     }
 }
